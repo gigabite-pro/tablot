@@ -8,7 +8,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
+    print(f'We have logged in as {client}')
 
 @client.event
 async def on_message(message):
@@ -19,3 +19,19 @@ async def on_message(message):
         await message.channel.send(f'ha bhai ik your name is {message.author.name} and your id is {message.author.id}.')
 
 client.run(TOKEN)
+
+# TODO - recognize gsheet link (public)
+# TODO - get cell data using gsheet api
+# TODO - create our own formatter (because discord doesn't support MD tables and stuff)
+# TODO - place gsheet data inside our table format
+
+'''
+Table example-
++--------+--------+-----------+
+| number | name   | role      |
++--------+--------+-----------+
+| 1      | rachit | loser     |
++--------+--------+-----------+
+| 2      | mihir  | pro loser |
++--------+--------+-----------+
+'''
