@@ -6,21 +6,21 @@
   </a>
 </p>
 
-Whenever someone sends a public google sheets link in the server, Tablot takes the google sheet data and displays it in the form of a table.
+whenever someone sends a public google sheets link in the server, Tablot takes the google sheet data and displays it in the form of a table.
 
-We currently use <a href='https://pypi.org/project/terminaltables/'>terminaltables</a> to generate the table.
+we currently use <a href='https://pypi.org/project/terminaltables/'>terminaltables</a> to generate the table.
 
-We are working on this just for the sake of getting familiarized with <a href='https://discordpy.readthedocs.io/en/latest/'>discord.py</a>
+we are working on this just for the sake of getting familiarized with <a href='https://discordpy.readthedocs.io/en/latest/'>discord.py</a>
 
 ### why tablot?
 "It's like one of those small things that makes your life 1% easier <3" ~ clash
 
 ### requirements
-requires python
+requires python 
 requires python-dotenv 
 requires terminaltables
 
-"hi rachit, pls create `requirements.txt` file"
+"hi rachit, pls create `requirements.txt` file" <br>
 "ok"
 
 ### commands
