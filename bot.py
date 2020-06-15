@@ -22,8 +22,7 @@ client.run(TOKEN)
 
 # TODO - recognize gsheet link (public)
 # TODO - get cell data using gsheet api
-# TODO - create our own formatter (because discord doesn't support MD tables and stuff)
-# TODO - place gsheet data inside our table format
+# TODO - use https://pypi.org/project/terminaltables/ and generate table
 
 '''
 Table example-
