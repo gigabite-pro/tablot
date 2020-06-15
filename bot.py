@@ -1,14 +1,24 @@
 import discord
 import os
 from dotenv import load_dotenv
+from terminaltables import AsciiTable
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
 
+# table data
+tableData = [
+    ['number', 'name', 'role'],
+    ['1', 'rachit gupta', 'loser'],
+    ['2', 'mihir aggarwal', 'pro loser']
+]
+
+table = AsciiTable(tableData)
+
 @client.event
 async def on_ready():
-    print(f'We have logged in as {client}')
+    print('i\'m ready to get back to work')
 
 @client.event
 async def on_message(message):
@@ -16,21 +26,10 @@ async def on_message(message):
         return
 
     if message.content.startswith('$hello'):
-        await message.channel.send(f'ha bhai ik your name is {message.author.name} and your id is {message.author.id}.')
+        await message.channel.send(f'```{table.table}```')
 
 client.run(TOKEN)
 
 # TODO - recognize gsheet link (public)
 # TODO - get cell data using gsheet api
 # TODO - use https://pypi.org/project/terminaltables/ and generate table
-
-'''
-Table example-
-+--------+--------+-----------+
-| number | name   | role      |
-+--------+--------+-----------+
-| 1      | rachit | loser     |
-+--------+--------+-----------+
-| 2      | mihir  | pro loser |
-+--------+--------+-----------+
-'''
